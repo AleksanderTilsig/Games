@@ -2,7 +2,7 @@
 	"name": "games",
 	"private": true,
 	"version": "0.0.1",
-	"homepage": "https://AleksanderTilsig.github.io/games",
+	"homepage": "https://AleksanderTilsig.github.io/Games",
 	"type": "module",
 	"scripts": {
 		"dev": "vite dev",
@@ -13,10 +13,11 @@
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
 		"format": "prettier --write .",
 		"lint": "prettier --check .",
-		"deploy": "gh-pages -d dist"
+		"deploy": "npm run build && echo > dist/.nojekyll && gh-pages -d dist"
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "^6.0.0",
+		"@sveltejs/adapter-static": "^3.0.8",
 		"@sveltejs/kit": "^2.16.0",
 		"@sveltejs/vite-plugin-svelte": "^5.0.0",
 		"gh-pages": "^6.3.0",
